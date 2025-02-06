@@ -1,0 +1,88 @@
+package mphasis.com.shape;
+import java.util.*;
+interface Vehicle {
+	void startengine();
+	void stopengine();
+	int fuelefficiency();
+}
+class Cars implements Vehicle{
+	private int eff;
+	public Cars(int eff) {
+		this.eff=eff;
+	}
+	public void startengine()
+	{
+		System.out.println("the car is started");
+	}
+	public void stopengine()
+	{
+		System.out.println("the car is stopped");
+	}
+	public int fuelefficiency()
+	{
+		return eff;
+	}
+}
+class Bike implements Vehicle{
+	private int eff;
+	public Bike(int eff) {
+		this.eff=eff;
+	}
+	public void startengine()
+	{
+		System.out.println("the Bike is started");
+	}
+	public void stopengine()
+	{
+		System.out.println("the Bike is stopped");
+	}
+	public int fuelefficiency()
+	{
+		return eff;
+	}
+}
+class Truck implements Vehicle{
+	private int eff;
+	public Truck(int eff) {
+		this.eff=eff;
+	}
+	public void startengine()
+	{
+		System.out.println("the Truck is started");
+	}
+	public void stopengine()
+	{
+		System.out.println("the Truck is stopped");
+	}
+	public int fuelefficiency()
+	{
+		return eff;
+	}
+}
+public class Main{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int eff=sc.nextInt();
+		int ef=sc.nextInt();
+		int e=sc.nextInt();
+		
+		Vehicle ca=new Cars(eff);
+		Vehicle bi=new Bike(ef);
+		Vehicle tr=new Truck(e);
+		ca.startengine();
+		ca.stopengine();
+		System.out.println("the car details are:"+ca.fuelefficiency());
+		System.out.println(" ");
+		bi.startengine();
+		bi.stopengine();
+		System.out.println("the bike details are:"+bi.fuelefficiency());
+		System.out.println(" ");
+		tr.startengine();
+		tr.stopengine();
+		System.out.println("the truck details are:"+tr.fuelefficiency());				
+		sc.close();
+	}
+	
+}
+
